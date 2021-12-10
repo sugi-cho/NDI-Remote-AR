@@ -1,0 +1,10 @@
+{
+  "name": "sugi.ar.remote",
+  "displayName": "sugi.ar.remote",
+  "version": "0.1.0",
+  "unity": "2021.2",
+  "description": "NDI with MetaData",
+  "author": {
+    "name": "hironori sugino"
+  }
+}
