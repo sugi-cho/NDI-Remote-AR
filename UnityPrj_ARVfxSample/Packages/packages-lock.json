@@ -172,7 +172,7 @@
       "url": "https://registry.npmjs.com"
     },
     "sugi.ar.remote": {
-      "version": "file:C:/Users/git/Repos/sugi-cho/NDI-Remote-AR/NDIRemoteAR",
+      "version": "file:../../NDIRemoteAR",
       "depth": 0,
       "source": "local",
       "dependencies": {}

@@ -13,7 +13,7 @@
     "com.unity.visualscripting": "1.7.6",
     "com.unity.xr.arkit": "4.2.1",
     "jp.keijiro.klak.ndi": "2.0.2",
-    "sugi.ar.remote": "file:/Users/sugino/repos/sugi-cho/NDI-Remote-AR/NDIRemoteAR",
+    "sugi.ar.remote": "file:../../NDIRemoteAR",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
