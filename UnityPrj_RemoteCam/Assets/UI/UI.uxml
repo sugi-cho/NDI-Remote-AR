@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" ml="UnityEditor.XR.MagicLeap" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="ViewPort" style="width: 1920px; height: 1080px; background-image: url(&apos;project://database/Assets/Textures/Texture.renderTexture?fileID=8400000&amp;guid=93e27348b890f40bfa275fb17342fa17&amp;type=2#Texture&apos;);" />
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-around;">
-        <ui:Toggle label="View Switch" style="-unity-text-align: middle-left; font-size: 36px; color: rgb(255, 255, 255);" />
+    <ui:VisualElement name="ViewPort" style="width: 1920px; height: 1080px; background-image: url(&apos;project://database/Assets/Textures/CameraTex.renderTexture?fileID=8400000&amp;guid=93e27348b890f40bfa275fb17342fa17&amp;type=2#CameraTex&apos;);" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <ui:DropdownField label="NDI Source" index="-1" choices="System.Collections.Generic.List`1[System.String]" style="flex-grow: 1; font-size: 36px; height: 48px; width: 48%; color: rgba(217, 217, 217, 255);" />
+        <ui:Button text="Realtime View" display-tooltip-when-elided="true" name="Realtime" style="height: 48px; font-size: 36px; flex-grow: 1; width: 25%;" />
+        <ui:Button text="NDI View" display-tooltip-when-elided="true" name="NDI" style="height: 48px; font-size: 36px; flex-grow: 1; width: 25%;" />
     </ui:VisualElement>
 </ui:UXML>

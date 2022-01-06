@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTex: {fileID: 8400000, guid: 93e27348b890f40bfa275fb17342fa17, type: 2}
   ndiTexture: {fileID: 8400000, guid: d394b14e5de824a33833d525c713e402, type: 2}
+  receiver: {fileID: 1670943730}
 --- !u!1 &1621783721
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a09ab5fc64402d49b12d170a7577986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ndiName: SUGIX4 (ARCam)
+  _ndiName: 
   _targetTexture: {fileID: 8400000, guid: d394b14e5de824a33833d525c713e402, type: 2}
   _targetRenderer: {fileID: 0}
   _targetMaterialProperty: 

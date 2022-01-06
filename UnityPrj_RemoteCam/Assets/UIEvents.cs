@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
+
+using Klak.Ndi;
 
 public class UIEvents : MonoBehaviour
 {
     [SerializeField] RenderTexture cameraTex;
     [SerializeField] RenderTexture ndiTexture;
+    [SerializeField] NdiReceiver receiver;
 
     private void OnEnable()
     {
@@ -14,12 +18,26 @@ public class UIEvents : MonoBehaviour
         var root = doc.rootVisualElement;
 
         var viewport = root.Q("ViewPort");
-        var toggle = root.Q<Toggle>();
+        var dropdown = root.Q<DropdownField>();
+        var realtimeButton = root.Q<Button>("Realtime");
+        var ndiButton = root.Q<Button>("NDI");
 
-        toggle.RegisterValueChangedCallback(evt => SetBackground(evt.newValue));
-        SetBackground(toggle.value);
+        var ndiNames = NdiFinder.sourceNames.ToList();
 
-        void SetBackground(bool val)=>
+        dropdown.RegisterCallback<FocusEvent>(evt => dropdown.choices = NdiFinder.sourceNames.ToList());
+        dropdown.RegisterValueChangedCallback(evt => receiver.ndiName = evt.newValue);
+        dropdown.choices = ndiNames;
+        if(0 < ndiNames.Count)
+        {
+            dropdown.index = 0;
+            receiver.ndiName = ndiNames[0];
+        }
+
+        realtimeButton.clicked += () => UseNdi(false);
+        ndiButton.clicked += () => UseNdi(true);
+        UseNdi(true);
+
+        void UseNdi(bool val)=>
             viewport.style.backgroundImage = Background.FromRenderTexture(val ? ndiTexture : cameraTex);
     }
 }
